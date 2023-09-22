@@ -31,7 +31,7 @@ import lombok.NoArgsConstructor;
  * CycleSortSnippet.
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class CycleSortSnippet {
+class CycleSortSnippet {
 
   /**
    * Sort an array with cycleSort algorithm.
