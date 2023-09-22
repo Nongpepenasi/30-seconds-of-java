@@ -27,6 +27,9 @@ package string;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * CompareVersionSnippet.
  */
@@ -61,6 +64,13 @@ public class CompareVersionSnippet {
   }
 
   private static String[] getVersionComponents(String version) {
-    return version.replaceAll(EXTRACT_VERSION_REGEX, "$1").split("\\.");
+    Pattern pattern = Pattern.compile("^\\d+\\.\\d+\\.\\d+$");
+    Matcher matcher = pattern.matcher(version);
+
+    if (matcher.matches()) {
+      return version.split("\\.");
+    }
+
+    return new String[0];
   }
 }
