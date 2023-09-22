@@ -24,9 +24,14 @@
 
 package algorithm;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * BubbleSortSnippet.
  */
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BubbleSortSnippet {
 
   /**
